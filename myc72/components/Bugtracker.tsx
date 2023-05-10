@@ -1,12 +1,5 @@
 import React from 'react'
 import Image from 'next/image';
-import webImg from "../public/web.png";
-import webbImg from "../public/webb.png";
-import homeimg from "../public/home.png";
-import yyimg from "../public/yy.png";
-import formImg from "../public/form.png";
-import proimg from "../public/Pro.png";
-import todoimg from "../public/todo.png";
 
 type Props = {}
 function Bugtracker({}: Props) {
@@ -14,27 +7,27 @@ function Bugtracker({}: Props) {
     {
       id: 1,
       title: "Home page ",
-      image: homeimg,
+      image: "https://i.postimg.cc/HnZ7zX9f/home.png  " ,
     },
     {
       id: 2,
       title: "Project creation",
-      image: proimg,
+      image: "https://i.postimg.cc/Y0qWQbY6/pro.png" ,
     },
     {
         id: 3,
         title: "Proyect Details ",
-        image: yyimg,
+        image: "https://i.postimg.cc/qqc8bnYw/yy.png",
       },
       {
         id: 4,
         title: "Bug Form",
-        image: formImg,
+        image: "https://i.postimg.cc/vBvn1pg8/form.png",
       },
       {
         id: 5,
         title: "Todo stored",
-        image: todoimg,
+        image: "https://i.postimg.cc/d3c2jnWD/todo.png",
       },
   ];
      
@@ -45,7 +38,7 @@ function Bugtracker({}: Props) {
         <div className='relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20' >
           {projects.map((project) => ( 
              <div key={project.id} className='w-screen flex-shrink-0  flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen ' > 
-              <Image className=' ' src={project.image} alt="/" />
+              <Image className='' src={project.image} alt='/' width={600} height={600} />
               
               <div>
                 <h4 className='font-mono   text-2xl ' >{project.title}</h4> 

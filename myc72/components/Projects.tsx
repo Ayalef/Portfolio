@@ -1,7 +1,6 @@
 import React from 'react'
 import Image from 'next/image';
-import webImg from "../public/web.png";
-import webbImg from "../public/webb.png";
+
 
 type Props = {}
 function Projects({}: Props) {
@@ -9,12 +8,12 @@ function Projects({}: Props) {
     {
       id: 1,
       title: "Web 3 Lottery Front page",
-      image: webImg,
+      image: "https://i.postimg.cc/bYxGD1tC/web.png",
     },
     {
       id: 2,
       title: "Web 3 Lottery Main page",
-      image: webbImg,
+      image: "https://i.postimg.cc/65B8dTV9/webb.png",
     },
   ];
      
@@ -28,7 +27,7 @@ function Projects({}: Props) {
         <div className='relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20' >
           {projects.map((project) => ( 
              <div key={project.id} className='w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen ' > 
-              <Image className=' ' src={project.image} alt="/" />
+              <Image className=' ' src={project.image} alt="/" width={600} height={600} />
               
               <div>
                 <h4 className='font-mono   text-2xl ' >{project.title}</h4> 
